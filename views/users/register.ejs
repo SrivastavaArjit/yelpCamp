@@ -1,0 +1,37 @@
+<%layout('layouts/boilerplate')%>
+<div class="col-6 offset-3">
+  <h1 class="text-center">Register!</h1>
+  <form class="needs-validation" action="/register" method="POST" novalidate>
+    <div class="mb-3">
+      <label class="form-label" for="username">Username</label>
+      <input
+        class="form-control"
+        type="text"
+        id="username"
+        name="username"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="email">Email</label>
+      <input
+        class="form-control"
+        type="email"
+        id="email"
+        name="email"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="password">Password</label>
+      <input
+        class="form-control"
+        type="password"
+        id="password"
+        name="password"
+        required
+      />
+    </div>
+    <button class="btn btn-success">Submit</button>
+  </form>
+</div>
