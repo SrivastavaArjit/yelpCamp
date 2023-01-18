@@ -18,19 +18,9 @@ db.once("open", () => {
 const sample = (arr) => arr[Math.floor(Math.random() * arr.length)];
 const randPrice = Math.floor(Math.random() * 20) + 10;
 
-const url = fetch(
-  "https://api.unsplash.com/photos/random/?client_id=5toU-KdEw7KxDg8HD_Vf3kMC-oBkqtOwiVJGwqMJ0xA&collections=o_hBYaHI2OU"
-)
-  .then((res) => {
-    return res.json();
-  })
-  .then((data) => {
-    return data.urls.small;
-  });
-
 const createDocument = async () => {
   await Campground.deleteMany({});
-  for (let i = 0; i < 60; i++) {
+  for (let i = 0; i < 300; i++) {
     const selectedCity = sample(cities);
     const camp = new Campground({
       author: "63c19d760cb8028cd7aa6629",
