@@ -10,6 +10,7 @@ const methodOverride = require("method-override");
 const path = require("path");
 const session = require("express-session");
 const flash = require("connect-flash");
+const mongoSanitize = require("express-mongo-sanitize");
 const ExpressError = require("./utils/ExpressError");
 const userRoutes = require("./routes/users");
 const campgroundRoutes = require("./routes/campgrounds");
@@ -27,6 +28,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(mongoSanitize());
 
 const sessionConfig = {
   secret: "thisshouldbeabettersecret",

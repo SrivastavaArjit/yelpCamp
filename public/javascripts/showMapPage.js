@@ -7,6 +7,8 @@ const map = new mapboxgl.Map({
   zoom: 11.9, // starting zoom
 });
 
+map.addControl(new mapboxgl.NavigationControl());
+
 // create the popup
 var popup = new mapboxgl.Popup({
   offset: [0, -10],
