@@ -7,6 +7,6 @@
 
 
 
-<!-- https://github.com/SrivastavaArjit/yelpCamp/assets/82926673/d12f9553-4a9e-46c1-a4aa-46c2b6391db7 -->
+https://github.com/SrivastavaArjit/yelpCamp/assets/82926673/d12f9553-4a9e-46c1-a4aa-46c2b6391db7
 
-![YelpCamp - Brave 2023-05-27 18-30-22](https://github.com/SrivastavaArjit/yelpCamp/assets/82926673/3765872a-ce34-40b6-8b09-92599167ecff)
+<!-- ![YelpCamp - Brave 2023-05-27 18-30-22](https://github.com/SrivastavaArjit/yelpCamp/assets/82926673/3765872a-ce34-40b6-8b09-92599167ecff) -->
