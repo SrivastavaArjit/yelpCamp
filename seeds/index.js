@@ -23,7 +23,7 @@ const createDocument = async () => {
   for (let i = 0; i < 300; i++) {
     const selectedCity = sample(cities);
     const camp = new Campground({
-      author: "63c19d760cb8028cd7aa6629",
+      author: "666984926c680ab5dbe66438",
       title: `${sample(descriptors)} ${sample(places)}`,
       location: `${selectedCity.city}, ${selectedCity.state}`,
       geometry: {

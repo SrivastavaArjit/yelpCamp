@@ -16,6 +16,7 @@ const ExpressError = require("./utils/ExpressError");
 const userRoutes = require("./routes/users");
 const campgroundRoutes = require("./routes/campgrounds");
 const reviewsRoutes = require("./routes/reviews");
+const MongoStore = require("connect-mongo");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user");
@@ -85,10 +86,23 @@ app.use(
     },
   })
 );
+const dbURI = process.env.DB_URI || "mongodb://127.0.0.1:27017/yelp-camp";
+const secret = process.env.SECRET || "thisshouldbeabettersecret!";
+
+const store = MongoStore.create({
+  mongoUrl: dbURI,
+  secret,
+  touchAfter: 24 * 60 * 60,
+});
+
+store.on("error", function (e) {
+  console.log("SESSION STORE ERROR", e);
+});
 
 const sessionConfig = {
+  store,
   name: "session",
-  secret: "thisshouldbeabettersecret",
+  secret,
   resave: false,
   saveUninitialized: true,
   cookie: {
@@ -98,6 +112,7 @@ const sessionConfig = {
     maxAge: 1000 * 60 * 60 * 24 * 7,
   },
 };
+
 app.use(session(sessionConfig));
 
 app.use(passport.initialize());
@@ -120,7 +135,11 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/reviews", reviewsRoutes);
 
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb://127.0.0.1:27017/yelp-camp");
+// mongoose.connect("mongodb://127.0.0.1:27017/yelp-camp");
+mongoose.connect(dbURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "Connection Error!"));
