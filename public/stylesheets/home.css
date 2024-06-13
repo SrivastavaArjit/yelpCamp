@@ -41,11 +41,15 @@ body {
 }
 
 .cover-container {
-  max-width: 60vw;
+  max-width: 70vw;
+  @media (max-width: 768px) {
+    max-width: 100vw;
+  }
 }
 
 .nav-link {
   padding: 0.25rem 0;
+  display: inline-block;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.5);
   margin-left: 1rem;
@@ -60,6 +64,13 @@ body {
 .nav-link.active {
   color: white;
   border-bottom-color: white;
+}
+
+.navbar-toggler {
+  width: 2.25em;
+  height: 2.25em;
+  padding: 0;
+  font-size: 1.15em;
 }
 
 .btn-secondary,

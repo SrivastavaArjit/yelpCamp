@@ -75,7 +75,7 @@ app.use(
       styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
       workerSrc: ["'self'", "blob:"],
       objectSrc: [],
-      mediaSrc: ["'self'"],
+      mediaSrc: ["'self'", "https://res.cloudinary.com/"],
       imgSrc: [
         "'self'",
         "blob:",
