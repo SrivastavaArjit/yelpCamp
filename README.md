@@ -1,17 +1,62 @@
-# yelpCamp
+# ⛺ YelpCamp
 
+## 📷 Screenshots
 
+## 💡 Lessons Learned / Technologies Used
 
+- MVC (Model-View-Controller) architecture to achieve seperation of concerns and maintain independence in relation to backend/frontend services.
+- [Express.js](https://github.com/expressjs/express) minimal, unopinionated backend framework to keep serverside boilerplate as low as possible. Especially useful for learning how to piece different technologies together to develop a complete backend.
+- [Express-Session](https://github.com/expressjs/session) to learn how cookies work to deliver a rich user experience through client and serverside cookies.
+- [Passport.js](https://github.com/jaredhanson/passport) for authentication and authorization.
+- [MongoDB](https://github.com/mongodb/mongo) as the primary NoSQL database to store campgrounds, users, reviews and session details.
+- [Mongoose](https://github.com/Automattic/mongoose) as an ORM(Object relation mapping) library to interact with MongoDB.
+- [Cloudinary](https://github.com/cloudinary/cloudinary_npm) to store images of campgrounds when users create new campgrounds, and to optimize them for when client-side requests them.
+- [Mapbox](https://github.com/mapbox/mapbox-gl-js) to deliver an interactive map for users to visually see the location of campgrounds through a cluster map and a zoomed in map for each campground.
+- [EJS (Embedded JavaScript Templates)](https://github.com/mde/ejs) as a templating language to create dynamic user experices.
+- [Bootstrap](https://github.com/twbs/bootstrap) as the driving CSS framework to create visually appealing user experiences.
+- Render to host the complete application
 
+## 🚀 Getting Started
 
-https://github.com/SrivastavaArjit/yelpCamp/assets/82926673/bf6a4aea-9f72-4095-bff4-7925f7657ce0
+### To run this project on your system:
 
+Create an .env file and add values to the following variables:
 
+```
+CLOUDINARY_CLOUD_NAME=<Your Cloudinary cloud name>
+CLOUDINARY_KEY=<Your Cloudinary key>
+CLOUDINARY_SECRET=<Your Cloudinary secret>
+MAPBOX_TOKEN=<Your Mapbox token>
+DB_URL=<Your MongoDB atlas URL or local MongoDB URL>
+```
 
+Make sure you have [MongoDB](https://docs.mongodb.com/manual/installation/) installed on your system
+In a terminal window, initialize a MongoDB Database
 
-* Developed a full stack web application called YelpCamp as part of Colt Steele's Web Development Bootcamp.
-* Implemented user authentication and authorization using Node.js and Passport.js.
-* Designed and built a database schema using MongoDB to store campground information, user data, user reviews.
-* Used Express.js as the web framework to handle routing and server-side logic.
-* User front-end technologies like HTML, CSS, and Bootstrap to create a responsive user interface.
+```
+$ ./mongod
+```
 
+In a second terminal window, access the MongoDB Database with Mongoose
+
+```
+$ mongoose
+```
+
+In a third terminal window, install dependencies using npm:
+
+```
+$ npm install
+```
+
+And then run the application with
+
+```
+$ npm start
+```
+
+or for hot reloading (recommended)
+
+```
+$ nodemon app.js
+```
