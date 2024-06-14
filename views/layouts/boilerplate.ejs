@@ -12,6 +12,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="/stylesheets/boilerplate.css" />
 
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
     <link
@@ -26,7 +27,7 @@
   </head>
   <body class="d-flex flex-column vh-100">
     <%- include('../partials/navbar') %>
-    <main class="container mt-5">
+    <main class="m-3 m-lg-5">
       <%- include('../partials/flash') %> <%- body -%>
     </main>
     <%- include('../partials/footer') %>

@@ -1,9 +1,9 @@
 <% layout('layouts/boilerplate') %>
 <div id="cluster-map"></div>
-<h1>All Campgrounds!</h1>
-<ul>
+<h1 class="my-3">All Campgrounds!</h1>
+<ul class="p-0">
   <%for(let campground of campgrounds) {%>
-  <div class="card mb-3" style="max-width: 95%">
+  <div class="card mb-3">
     <div class="row g-0">
       <div class="col-md-4">
         <% if(campground.image.length){ %>
@@ -36,6 +36,12 @@
               href="/campgrounds/<%=campground._id%> "
               role="button"
               >View</a
+            >
+            <a
+              class="btn btn-primary"
+              href="/campgrounds/<%=campground._id%>/edit "
+              role="button"
+              >Edit</a
             >
           </div>
         </div>

@@ -1,7 +1,20 @@
 <% layout('layouts/boilerplate') %>
-<div class="row">
-  <h1 class="text-center">Edit Campground</h1>
-  <div class="col-6 offset-3">
+<div class="video-container">
+  <video
+    autoplay
+    muted
+    loop
+    poster="https://res.cloudinary.com/do0npzyzl/image/upload/v1718292904/YelpCamp/static/yg04oi98nb7abr2fimou.jpg"
+  >
+    <source
+      src="https://res.cloudinary.com/do0npzyzl/video/upload/v1718292928/YelpCamp/static/wjrdgejlfmkfgnfyfeof.mp4"
+      type="video/mp4"
+    />
+  </video>
+</div>
+<div class="row" style="max-width: 35rem; margin: auto">
+  <h1 class="text-center text-light">Edit Campground</h1>
+  <div class="col-12">
     <form
       class="needs-validation"
       action="/campgrounds/<%=campground._id%>?_method=PUT "
@@ -10,9 +23,9 @@
       novalidate
     >
       <div class="mb-3">
-        <label class="form-label" for="title">Title</label>
+        <label class="form-label text-light" for="title">Title</label>
         <input
-          class="form-control"
+          class="form-control bg-transparent text-light"
           type="text"
           id="title"
           name="campground[title]"
@@ -21,9 +34,9 @@
         />
       </div>
       <div class="mb-3">
-        <label class="form-label" for="location">Location</label>
+        <label class="form-label text-light" for="location">Location</label>
         <input
-          class="form-control"
+          class="form-control bg-transparent text-light"
           type="text"
           id="location"
           name="campground[location]"
@@ -32,9 +45,11 @@
         />
       </div>
       <div class="mb-3">
-        <label for="description" class="form-label">Description</label>
+        <label for="description" class="form-label text-light"
+          >Description</label
+        >
         <textarea
-          class="form-control"
+          class="form-control bg-transparent text-light"
           id="description"
           rows="3"
           name="campground[description]"
@@ -45,12 +60,14 @@
       </div>
 
       <div class="mb-3">
-        <label class="form-label" for="price">Campground Price</label>
+        <label class="form-label text-light" for="price"
+          >Campground Price</label
+        >
         <div class="input-group mb-3">
           <span class="input-group-text" id="price-label">$</span>
           <input
             type="text"
-            class="form-control"
+            class="form-control bg-transparent text-light"
             id="price"
             aria-label="Username"
             aria-describedby="price-label"
@@ -61,9 +78,11 @@
         </div>
       </div>
       <div class="mb-3">
-        <label for="formFileMultiple" class="form-label">Add New Images</label>
+        <label for="formFileMultiple" class="form-label text-light"
+          >Add New Images</label
+        >
         <input
-          class="form-control"
+          class="form-control text-light bg-transparent"
           type="file"
           id="formFileMultiple"
           name="image"
@@ -71,7 +90,7 @@
         />
       </div>
 
-      <div class="mb-3">
+      <div class="mb-3 text-light">
         Delete Images
         <div class="mt-2 container">
           <div class="row">
@@ -93,7 +112,12 @@
         </div>
       </div>
       <button type="submit" class="btn btn-info mb-3">Update</button>
+      <a
+        role="button"
+        class="btn btn-danger mb-3 ms-2"
+        href="/campgrounds/<%=campground._id%> "
+        >Cancel</a
+      >
     </form>
-    <a href="/campgrounds/<%=campground._id%> ">Cancel</a>
   </div>
 </div>
