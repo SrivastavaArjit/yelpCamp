@@ -1,6 +1,9 @@
 # ⛺ YelpCamp
 
 ## 📷 Screenshots
+![Screenshot 2024-06-14 154809](https://github.com/SrivastavaArjit/yelpCamp/assets/82926673/88fa265d-2b0d-45fa-be90-0fc3c3503b70)
+![Screenshot 2024-06-14 154822](https://github.com/SrivastavaArjit/yelpCamp/assets/82926673/453ba1f7-7b40-4deb-8395-8ea8f17c09f4)
+![Screenshot 2024-06-14 154838](https://github.com/SrivastavaArjit/yelpCamp/assets/82926673/0109de33-8798-4578-88cb-9b996888aa2a)
 
 ## 💡 Lessons Learned / Technologies Used
 
